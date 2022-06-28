@@ -42,7 +42,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
   sku: {
     name: storageAccountType
   }
-  kind: 'Storage'
+  kind: 'StorageV2'
 }
 
 resource imageStorageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
@@ -51,7 +51,7 @@ resource imageStorageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
   sku: {
     name: storageAccountType
   }
-  kind: 'Storage'
+  kind: 'StorageV2'
 }
 
 resource hostingPlan 'Microsoft.Web/serverfarms@2021-03-01' = {
