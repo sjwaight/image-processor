@@ -108,12 +108,8 @@ resource functionApp 'Microsoft.Web/sites@2021-03-01' = {
           value: 'thumbnails'
         }
         {
-          name: 'IMAGE_STORAGE_ACCOUNT'
-          value: imageStorageAccountName
-        }
-        {
-          name: 'IMAGE_STORAGE_ACCOUNT_KEY'
-          value: imageStorageAccount.listKeys().keys[0].value
+          name: 'INPUT_IMAGE_STORAGE_ACCOUNT_CONNECTION'
+          value: 'DefaultEndpointsProtocol=https;AccountName=${imageStorageAccountName};EndpointSuffix=${environment().suffixes.storage};AccountKey=${imageStorageAccount.listKeys().keys[0].value}'
         }
         {
           name: 'COMPUTER_VISION_ENDPOINT'
